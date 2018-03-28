@@ -11,3 +11,19 @@
         width: 50vw;
     }
 }
+
+@media screen and (max-width: 768px) {
+	h2 {
+		font-size: 150%;
+	}
+	h3 {
+		font-size: 125%;	
+	}
+	a {
+		font-size: 100%;
+	}
+	body {
+		background: #ffffff;
+	}
+	
+}

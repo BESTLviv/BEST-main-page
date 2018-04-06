@@ -3,24 +3,25 @@
      grabbing: false,
      slidesToScroll: 1,
      arrows: false,
+     draggable : false,
      responsive: [{
              breakpoint: 1440,
-             settings: {
-                 slidesToShow: 4,
-                 slidesToScroll: 1,
-             }
-         },
-         {
-             breakpoint: 600,
              settings: {
                  slidesToShow: 3,
                  slidesToScroll: 1,
              }
          },
          {
+             breakpoint: 700,
+             settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 1,
+             }
+         },
+         {
              breakpoint: 426,
              settings: {
-                 slidesToShow: 2,
+                 slidesToShow: 1,
                  slidesToScroll: 1,
              }
          }
@@ -30,7 +31,7 @@
  var timelineItems = [$('.sc'), $('.ejf'), $('.hack'), $('.ebec'), $('.bsc'), $('.btw')];
  var projects = [$('.sc-p'), $('.ejf-p'), $('.hack-p'), $('.ebec-p'), $('.bsc-p'), $('.btw-p')];
  var cur, nev;
- cur = nev = 2;
+ cur = nev = 1;
 
  //timelineItems[1].toggleClass("active");
 
@@ -63,18 +64,66 @@
   }
 
  $('.prev').click(function () {
-     $('.timeline-items').slick('slickPrev');
-     left();
-     change();
-     //alert(nev);
- })
+    goPrev();
+ });
 
  $('.next').click(function () {
-     $('.timeline-items').slick('slickNext');
-     right();
-     change();
-     //alert(nev);
- })
+    goNext();
+ });
+
+/*modified slider*/
+$('.timeline-items-item').on('click', function(){
+    if($(document).width() < 600){
+        goNext();
+    }
+    if($(this).offset().left < $(document).width()/3){
+        goPrev();
+    } else if($(this).offset().left > 2*$(document).width()/3){
+       goNext();
+    }
+});
+
+function goPrev(){
+    $('.timeline-items').slick('slickPrev');
+    left();
+    change();
+}
+
+function goNext(){
+    $('.timeline-items').slick('slickNext');
+    right();
+    change();    
+}
+
+//links inside of timeline-item
+
+$('.contacts').css('display', 'none');
+$('.gallery').css('display', 'none');
+
+$('.link-main-info').on('click', function(){
+    
+    $('.contacts').css('display', 'none');
+    $('.gallery').css('display', 'none');
+    $('.main_info').css('display', 'block');
+});
+
+$('.link-contacts').on('click', function(){
+    
+    $('.contacts').css('display', 'block');
+    $('.gallery').css('display', 'none');
+    $('.main_info').css('display', 'none');
+});
+
+$('.link-gallery').on('click', function(){
+    
+    $('.contacts').css('display', 'none');
+    $('.gallery').css('display', 'block');
+    $('.main_info').css('display', 'none');
+});
+
+$('.nav-link-proj').on('click', function(){
+    return false;
+});
 
 
 

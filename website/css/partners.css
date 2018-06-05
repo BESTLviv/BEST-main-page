@@ -1,5 +1,7 @@
 header {
-    height: 0;
+    height: 20%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 body {
@@ -108,12 +110,14 @@ body {
 .center-button {
     margin-right: auto;
     margin-left: auto;
-    width: 40%;
+    width: 35%;
+    margin-bottom: 2%;
 }
 
 .button-back {
     padding: 10px 15px;
-    margin: 25px;
+    padding-bottom: 5px;
+    margin: 25px 20px;
     border: 2px solid #5b5b5b;
     border-radius: 8px;
     text-align: center;
@@ -158,6 +162,7 @@ body {
 
 .footer {
     bottom: 0 !important;
+    font-size: 18px;
 }
 
 

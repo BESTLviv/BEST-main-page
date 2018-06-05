@@ -4,7 +4,7 @@
 body {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
-	font-size: 12pt;
+	font-size: 20px;
 	color: #5b5b5b;
 	-webkit-overflow-scrolling: touch;
 	background: url(../img/map.png) no-repeat right top;
@@ -25,9 +25,13 @@ p{
 	margin-bottom: 24px;
 }
 
+a {
+	font-size: 18px;
+}
+
 .center{
 	text-align: center;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 header {
@@ -65,6 +69,7 @@ li {
 .nav-link {
 	font-family: "Montserrat", sans-serif;
 	color: #5b5b5b;
+	transition: 0.5s;
 }
 
 .nav-item ul {
@@ -83,7 +88,6 @@ a:hover, a:focus {
 	outline: 0;
 }
 
-
 .logo{
 	position: absolute;
 	max-height: 200px;
@@ -92,12 +96,12 @@ a:hover, a:focus {
 }
 
 .media {
-	margin-top: 60px; 
+	margin-top: 15%; 
 }
 
 .media li a {
 	color: #5b5b5b;
-	font-size: 11pt;
+	font-size: 18px;
 	margin-right: 50px;
 	font-weight: 200;
 	text-decoration: none;
@@ -162,7 +166,7 @@ a:hover, a:focus {
 }
 
 .main_info {
-	margin: 20px 80px 20px 80px;
+	margin: 3% 200px;
 	color: #ffffff;
 }
 
@@ -170,6 +174,7 @@ a:hover, a:focus {
 	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 	color: #ffffff;
+	transition: 0.5s;
 }
 
 .sc-p {
@@ -207,6 +212,7 @@ a:hover, a:focus {
 	background-color: #5b5b5b;
 	color: #ffffff;
 	text-align: center;
+	font-size: 18px;
 	padding: 20px 30px 20px 30px;
 	display: flex;
 	position: relative;
